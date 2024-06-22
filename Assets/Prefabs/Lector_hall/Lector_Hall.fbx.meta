@@ -1,0 +1,369 @@
+fileFormatVersion: 2
+guid: 0de3987f0e0597b4c83c3253450635b4
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: air_con.001
+    second: {fileID: 2100000, guid: 9d5798d7872067544988be6c5f5d7ee1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blind.001
+    second: {fileID: 2100000, guid: 38085c85c206fbc46af3fcb9ca7e66a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ceiling.001
+    second: {fileID: 2100000, guid: a43334f9386654941aa78662f534e6d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chair.001
+    second: {fileID: 2100000, guid: 85136e863b2264341b96872ac3596e5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: com_desk.001
+    second: {fileID: 2100000, guid: 024e8d48c80a1d34aba3503f75397a32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desk.001
+    second: {fileID: 2100000, guid: dc466ac71ab6ed443a73229321bde1dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door_props.001
+    second: {fileID: 2100000, guid: 45514d0aa25ec1546939fe3bab2100a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fireplug.001
+    second: {fileID: 2100000, guid: 67941b1506fe764419a422a5b305d972, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor.002
+    second: {fileID: 2100000, guid: 25c9eee763b94f741985025bc5c4a5fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor.003
+    second: {fileID: 2100000, guid: e381ecb3d719c6348b6e1407acad507a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: front_light.001
+    second: {fileID: 2100000, guid: 4b871932d22f0f140ba05b0a570cd93f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: molding.001
+    second: {fileID: 2100000, guid: 6cce4a422c4a7464c8c4a4d08dc60ecc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pillars.001
+    second: {fileID: 2100000, guid: e81808c1ba0bb384db73a52c39fb43d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: power_socket.001
+    second: {fileID: 2100000, guid: a111c4ef20993e44a9866b9cc702ddda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: t-desk.001
+    second: {fileID: 2100000, guid: d3e9380dc0d1c944e8c632f7d3bd7579, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tdesk_TR.001
+    second: {fileID: 2100000, guid: 50b4f4d0c06371444a261726ff4116ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: upper_molding.001
+    second: {fileID: 2100000, guid: 676e378fcc031e74cb25a9e5b37ce07e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white_board.001
+    second: {fileID: 2100000, guid: 3e627c61a8ab07d4c96be982ce9977d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wooden_wall.001
+    second: {fileID: 2100000, guid: 157c3e222b6bf39468f10dbe12e6a1e0, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: air_con_baseColor
+    second: {fileID: 2800000, guid: 2c9f23bc78dbd154187fa88e2424d376, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: air_con_normal
+    second: {fileID: 2800000, guid: a8f46a4fdd66c1a419842ebb1d2d4aee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: blind_baseColor
+    second: {fileID: 2800000, guid: 1ef6bbbfb8effed48a2f26d4d297141f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: blind_normal
+    second: {fileID: 2800000, guid: 1ce3188fbb2a5884bac6dda88b4d7595, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ceiling_baseColor
+    second: {fileID: 2800000, guid: 4e4dd0efe8f99ab45a3c9fe2284c7715, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chair_baseColor
+    second: {fileID: 2800000, guid: f81280476799c544c947edd19f95054a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: chair_normal
+    second: {fileID: 2800000, guid: ecb32ca0648ae7b47b661bc565b36b72, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: com_desk_baseColor
+    second: {fileID: 2800000, guid: 7e4dc48b51451ec41853c912329584d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: com_desk_normal
+    second: {fileID: 2800000, guid: 5ecddd05b7eb68a4b8a87b922b760eab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: desk_baseColor
+    second: {fileID: 2800000, guid: 27305e9b99350314fabc697e299f4c1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: desk_normal
+    second: {fileID: 2800000, guid: 843c01e69ab1aba4c82cd96f5f9839dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: door_props_baseColor
+    second: {fileID: 2800000, guid: 8c94e8fb6b427a941b8ead78a08aa57f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: door_props_normal
+    second: {fileID: 2800000, guid: 413db11a0ea45f84b84951586bb63095, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fireplug_baseColor
+    second: {fileID: 2800000, guid: 268f8d133dda56f4fbd73388d8bd41f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fireplug_normal
+    second: {fileID: 2800000, guid: b8c07c7d020a0604193908de55d70728, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: floor.001_baseColor
+    second: {fileID: 2800000, guid: 757f404422d715a41b0a057de2e5de9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: floor_baseColor
+    second: {fileID: 2800000, guid: c2c74b40cc8e9654c854ec9f396fafec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: floor_normal
+    second: {fileID: 2800000, guid: 0a519006a7142f145a0804f5456b03f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: front_light_baseColor
+    second: {fileID: 2800000, guid: ea8ed188f1affb04fb9baf2e8213c22b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: molding_baseColor
+    second: {fileID: 2800000, guid: 96b16fe1bded26e4e916b0ab205297ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: molding_normal
+    second: {fileID: 2800000, guid: 39058ff2f42e92545b680c6e31b5b98b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pillars_baseColor
+    second: {fileID: 2800000, guid: 2f898bb750d54df48b9bb111f7486684, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pillars_normal
+    second: {fileID: 2800000, guid: 67d495cb5df359c4b96cc0df7c7e1d5a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: power_socket_baseColor
+    second: {fileID: 2800000, guid: 63fb72752b9d77c4089f0213b140953a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: power_socket_normal
+    second: {fileID: 2800000, guid: 4357251025f32e44eb554212c13d8037, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: t-desk_baseColor
+    second: {fileID: 2800000, guid: 4988aa0b81f2ca9418d163cec0269d8e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tdesk_TR_normal
+    second: {fileID: 2800000, guid: 36ff574dc860c3b42813ff2b5e0cad44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: upper_molding_baseColor
+    second: {fileID: 2800000, guid: 5afd858dc305a884b970cd88f2d31fb7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: upper_molding_normal
+    second: {fileID: 2800000, guid: 99594dbd75473bd43a72178d5a0c4c65, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wall_mat_normal
+    second: {fileID: 2800000, guid: 422764ed34d5c854b983800f611a0ad6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: white_board_baseColor
+    second: {fileID: 2800000, guid: 2b3ccb0efaa559041b4c5d894c267550, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: white_board_normal
+    second: {fileID: 2800000, guid: 9bcfb4b390adb7d4487b0ba47a0898e5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wooden_wall_baseColor
+    second: {fileID: 2800000, guid: 97d7e0ecf9521fa46b0c850bc05e6b68, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
