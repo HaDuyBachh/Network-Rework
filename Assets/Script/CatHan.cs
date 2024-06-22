@@ -38,7 +38,7 @@ public class CatHan : MonoBehaviour
             if (other.CompareTag("DayMang"))
             {
                 if (true)
-                //if (InputDevicesManagement.Instance.IsTriggerPressed())
+                if (InputDevicesManagement.Instance.IsTriggerPressed())
                 {
                     DayGoc = other.gameObject;
                     var localScale = DayGoc.transform.localScale;
@@ -69,7 +69,7 @@ public class CatHan : MonoBehaviour
                         
                     audioTextManager.GetComponent<AudioTextManager>().PlayAudioClipAtIndex(4);
                     done = true;
-                    Debug.Log("Đã hoàn thành");
+                    Debug.Log("Đã chạy đến cắt dây ra đoạn dây nhỏ");
                 }
             }
 

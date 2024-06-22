@@ -39,7 +39,7 @@ public class CatVo : MonoBehaviour
             if (other.CompareTag("DayMang") && dacat)
             {
                 if (true)
-                //if (InputDevicesManagement.Instance.IsTriggerPressed())
+                if (InputDevicesManagement.Instance.IsTriggerPressed())
                 {
                     GameObject dayMang = other.gameObject;
                     Transform coverTransform = dayMang.transform.Find("Cover");
@@ -51,7 +51,7 @@ public class CatVo : MonoBehaviour
                         cover.transform.localScale = localScale;
                         audioTextManager.GetComponent<AudioSource>().Stop();
                         audioTextManager.GetComponent<AudioTextManager>().PlayAudioClipAtIndex(5);
-                        Debug.Log("Đã chạy đến đây");
+                        Debug.Log("Đã chạy đến tuốt vỏ");
                         datuot = true;
                     }
                 }

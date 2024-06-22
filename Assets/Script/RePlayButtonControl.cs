@@ -17,11 +17,16 @@ public class RePlayButtonControl : MonoBehaviour
 
     private void ThemDayMangMoi()
     {
-
-        if (dayBefore != null && !dayBefore.transform.GetChild(1).transform.GetChild(0).gameObject.activeSelf)
+        if (dayBefore != null)
+        for (int i = 0; i<1; i++)
         {
-            Destroy(dayBefore);
-        }
+            var daychild = dayBefore.transform.GetChild(i);
+            if (daychild.tag.Contains("DayMangDaTuot") && !daychild.GetChild(0).gameObject.activeSelf)
+            {
+                Destroy(dayBefore);
+                break;
+            }    
+        }    
      
         var day = Instantiate(DayMang);
 
