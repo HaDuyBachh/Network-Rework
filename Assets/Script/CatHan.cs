@@ -38,7 +38,7 @@ public class CatHan : MonoBehaviour
             if (other.CompareTag("DayMang"))
             {
                 if (true)
-                if (InputDevicesManagement.Instance.IsTriggerPressed())
+                //if (InputDevicesManagement.Instance.IsTriggerPressed())
                 {
                     DayGoc = other.gameObject;
                     var localScale = DayGoc.transform.localScale;

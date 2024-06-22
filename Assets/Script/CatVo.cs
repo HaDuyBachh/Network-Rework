@@ -39,7 +39,7 @@ public class CatVo : MonoBehaviour
             if (other.CompareTag("DayMang") && dacat)
             {
                 if (true)
-                if (InputDevicesManagement.Instance.IsTriggerPressed())
+                //if (InputDevicesManagement.Instance.IsTriggerPressed())
                 {
                     GameObject dayMang = other.gameObject;
                     Transform coverTransform = dayMang.transform.Find("Cover");
