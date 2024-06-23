@@ -42,6 +42,7 @@ public class ANHIEN : MonoBehaviour
             TTTRuoc.SetActive(false);
             TTSAU.transform.position = TTTRuoc.transform.position;
             TTSAU.transform.rotation = TTTRuoc.transform.rotation;
+            
             audioTextManager.GetComponent<AudioSource>().Stop();
             audioTextManager.GetComponent<AudioTextManager>().PlayAudioClipAtIndex(6);
         }

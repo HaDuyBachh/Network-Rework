@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR.Interaction.Toolkit;
 public class CatHan : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class CatHan : MonoBehaviour
             OnTriggerStay(example.GetComponent<Collider>());
         }
     }
-    
+
 
     private GameObject ViTriThemDayMang;
     private GameObject DayGoc;
@@ -38,43 +38,42 @@ public class CatHan : MonoBehaviour
             if (other.CompareTag("DayMang"))
             {
                 if (true)
-                if (InputDevicesManagement.Instance.IsTriggerPressed())
-                {
-                    DayGoc = other.gameObject;
-                    var localScale = DayGoc.transform.localScale;
-                    localScale = new Vector3(localScale.x, localScale.y * 0.9f, localScale.z);
-                    DayGoc.transform.localScale = localScale;
-            
-                    GameObject DayNhoHon = Instantiate(DayGoc);
-                    DayNhoHon.transform.localScale = 
-                        new Vector3(DayNhoHon.transform.localScale.x, DayGoc.transform.localScale.y * 0.1f, DayNhoHon.transform.localScale.z);
-                    
-                    foreach (Transform ch in DayGoc.transform)
+                    if (InputDevicesManagement.Instance.IsTriggerPressed())
                     {
-                        if (ch.tag.Contains("ViTriCatDayMang"))
-                        {
-                            ViTriThemDayMang = ch.gameObject;
-                            break;
-                        }    
-                    }
-                    DayNhoHon.transform.position = ViTriThemDayMang.transform.position;
-                    DayNhoHon.transform.rotation = ViTriThemDayMang.transform.rotation;
-                    DayNhoHon.GetComponent<Rigidbody>().useGravity = true;
-                    DayNhoHon.GetComponent<Rigidbody>().isKinematic = false;
-                    Debug.Log("Object: " + DayNhoHon.name + " useGravity = " + DayNhoHon.GetComponent<Rigidbody>().useGravity);
-                    if (audioTextManager.GetComponent<AudioSource>().isPlaying)
-                    {
-                        audioTextManager.GetComponent<AudioSource>().Stop();
-                    }
-                        
-                    audioTextManager.GetComponent<AudioTextManager>().PlayAudioClipAtIndex(4);
-                    done = true;
-                    Debug.Log("Đã chạy đến cắt dây ra đoạn dây nhỏ");
-                }
-            }
+                        DayGoc = other.gameObject;
+                        var localScale = DayGoc.transform.localScale;
+                        localScale = new Vector3(localScale.x, localScale.y * 0.9f, localScale.z);
+                        DayGoc.transform.localScale = localScale;
+                        GameObject DayNhoHon = Instantiate(DayGoc);
+                        DayNhoHon.transform.localScale =
+                            new Vector3(DayNhoHon.transform.localScale.x, DayGoc.transform.localScale.y * 0.1f, DayNhoHon.transform.localScale.z);
 
-            timeSinceLastTriggerStay = 0;
+                        foreach (Transform ch in DayGoc.transform)
+                        {
+                            if (ch.tag.Contains("ViTriCatDayMang"))
+                            {
+                                ViTriThemDayMang = ch.gameObject;
+                                break;
+                            }
+                        }
+                        DayNhoHon.transform.position = ViTriThemDayMang.transform.position;
+                        DayNhoHon.transform.rotation = ViTriThemDayMang.transform.rotation;
+                        DayNhoHon.GetComponent<Rigidbody>().useGravity = true;
+                        DayNhoHon.GetComponent<Rigidbody>().isKinematic = false;
+                        Debug.Log("Object: " + DayNhoHon.name + " useGravity = " + DayNhoHon.GetComponent<Rigidbody>().useGravity);
+                        if (audioTextManager.GetComponent<AudioSource>().isPlaying)
+                        {
+                            audioTextManager.GetComponent<AudioSource>().Stop();
+                        }
+
+                        audioTextManager.GetComponent<AudioTextManager>().PlayAudioClipAtIndex(4);
+                        done = true;
+                        Debug.Log("Đã chạy đến cắt dây ra đoạn dây nhỏ");
+
+                        timeSinceLastTriggerStay = 0;
+                    }
+            }
         }
-        
+
     }
 }

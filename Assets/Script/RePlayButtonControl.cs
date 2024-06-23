@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,16 +18,19 @@ public class RePlayButtonControl : MonoBehaviour
     private void ThemDayMangMoi()
     {
         if (dayBefore != null)
-        for (int i = 0; i<1; i++)
-        {
-            var daychild = dayBefore.transform.GetChild(i);
-            if (daychild.tag.Contains("DayMangDaTuot") && !daychild.GetChild(0).gameObject.activeSelf)
+        {     
+            for (int i = 0; i < 1; i++)
             {
-                Destroy(dayBefore);
-                break;
-            }    
-        }    
-     
+                var daychild = dayBefore.transform.GetChild(i);
+                if (daychild.tag.Contains("DayMangDaTuot") && !daychild.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(dayBefore);
+                    Debug.Log("Đã xóa dây trước");
+                    break;
+                }
+            }
+        }
+
         var day = Instantiate(DayMang);
 
         dayBefore = day;
@@ -56,7 +59,7 @@ public class RePlayButtonControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (theshhold_delta <=0 && other.tag.Contains("Hand")) // && InputDevicesManagement.Instance.IsTriggerPressed())
+        if (theshhold_delta <= 0 && other.tag.Contains("Hand")) // && InputDevicesManagement.Instance.IsTriggerPressed())
         {
             ThemDayMangMoi();
             audioControl.PlayAudioClipAtIndex(3);
