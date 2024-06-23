@@ -14,6 +14,11 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("FirstPlace");
     }    
+
+    public void SceneGamePlay(){
+        SceneManager.LoadScene("Màn 1");
+    }
+
     public void ApplicationQuit()
     {
         Application.Quit();

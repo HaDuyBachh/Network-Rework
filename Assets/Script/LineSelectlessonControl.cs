@@ -42,11 +42,11 @@ public class LineSelectLessonControl : MonoBehaviour
             if (Physics.Raycast(new Ray(lineOrigin.position, lineOrigin.forward), out var hit))
             {
                 this.hit = hit;
-                if (hit.collider.gameObject.name.Contains("Bài giảng cắt dây mạng"))
+                if (hit.collider.gameObject.name.Contains("Thực hành cắt dây mạng Panel"))
                 {
                     FindObjectOfType<SceneController>().SceneNetWorkCableScene();
                 }
-                if (hit.collider.gameObject.name.Contains("Bài giảng cắt dây mạng"))
+                if (hit.collider.gameObject.name.Contains("Thực hành Neo Terra"))
                 {
                     FindObjectOfType<SceneController>().SceneNetWorkCableScene();
                 }
