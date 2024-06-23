@@ -16,7 +16,7 @@ public class SceneController : MonoBehaviour
     }    
 
     public void SceneGamePlay(){
-        SceneManager.LoadScene("Màn 1");
+        SceneManager.LoadScene("BookTable");
     }
 
     public void ApplicationQuit()
