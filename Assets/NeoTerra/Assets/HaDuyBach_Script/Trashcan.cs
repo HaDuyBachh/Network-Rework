@@ -7,7 +7,7 @@ public class Trashcan : MonoBehaviour
     public Trash.Type _trashcanType;
     public PointHandler pointHandler;
 
-    public void Awake()
+    public void Start()
     {
         pointHandler = FindAnyObjectByType<PointHandler>();
     }

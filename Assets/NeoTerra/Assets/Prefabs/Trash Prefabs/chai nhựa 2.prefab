@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9180544723565831246}
   - component: {fileID: 6214854270366451850}
   - component: {fileID: 1190207745572724347}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Object_126.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5332906365161196588}
-  serializedVersion: 2
   m_LocalRotation: {x: -7.184882e-15, y: -0, z: -3.5527133e-15, w: 1}
   m_LocalPosition: {x: 0.07855734, y: -0.004861911, z: 1.5422559}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5705253641363502612}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9180544723565831246
 MeshFilter:
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6026077530257732474}
   - component: {fileID: 1792429761146051403}
   - component: {fileID: 3020320229031301402}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: "chai nh\u1EF1a 2"
   m_TagString: trash
   m_Icon: {fileID: 0}
@@ -131,7 +131,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6625234106285562607}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.1875099, z: 0, w: 0.98226273}
   m_LocalPosition: {x: -1.351, y: 0.193, z: -5.336}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -140,6 +139,7 @@ Transform:
   - {fileID: 5601115956704959577}
   - {fileID: 4328176289180660999}
   m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -21.615, z: 0}
 --- !u!54 &6026077530257732474
 Rigidbody:
@@ -189,7 +189,6 @@ MonoBehaviour:
     m_Bits: 1
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
-  m_FocusMode: 1
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
   m_AllowGazeSelect: 0
@@ -220,18 +219,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstFocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastFocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusExited:
     m_PersistentCalls:
       m_Calls: []
   m_Activated:
@@ -291,10 +278,6 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
-  m_SmoothScale: 0
-  m_SmoothScaleAmount: 8
-  m_TightenScale: 0.1
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.5
   m_ThrowSmoothingCurve:
@@ -362,7 +345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4328176289180660999}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Attach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,11 +359,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7064100842507853321}
-  serializedVersion: 2
   m_LocalRotation: {x: 1.065814e-14, y: -0.70604074, z: -1.4210853e-14, w: 0.7081713}
   m_LocalPosition: {x: 0.0901, y: 0.2467, z: 0.0127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5705253641363502612}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: -89.827, z: 0}

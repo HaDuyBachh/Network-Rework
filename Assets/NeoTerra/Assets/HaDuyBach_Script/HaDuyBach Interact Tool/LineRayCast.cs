@@ -40,7 +40,10 @@ public class LineRayCast : MonoBehaviour
             if (Physics.Raycast(new Ray(lineOrigin.position, lineOrigin.forward), out var hit))
             {
                 this.hit = hit;
-                Debug.Log("Bắn trúng " + hit.collider.name + " rùi");
+                if (hit.transform.TryGetComponent<RayCastActiveObjectController>(out var _active))
+                {
+                    _active.RayCastActive();
+                }    
             }
 
             line.SetPosition(0, lineOrigin.position);

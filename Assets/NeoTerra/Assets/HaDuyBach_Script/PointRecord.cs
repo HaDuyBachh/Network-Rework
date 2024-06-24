@@ -19,7 +19,7 @@ public class PointRecord : MonoBehaviour
             {
                 trashcan.UpdatePoint(trash._point);
             }
-            Destroy(trash.gameObject, 0.5f);
+            Destroy(trash.gameObject, 0.1f);
         }
     }
 

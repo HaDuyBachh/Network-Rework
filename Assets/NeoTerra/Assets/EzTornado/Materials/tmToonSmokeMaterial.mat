@@ -8,20 +8,17 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: tmToonSmokeMaterial
-  m_Shader: {fileID: 4800000, guid: b7839dad95683814aa64166edc107ae2, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8516d7a69675844a7a0b7095af7c46af, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
   - _COLORCOLOR_ON
   - _EMISSION
   - _NORMALMAP
+  - _SPECULAR_COLOR
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
-  - _ALPHABLEND_ON
   - _FLIPBOOKBLENDING_OFF
-  - _GLOSSYREFLECTIONS_OFF
-  - _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -76,6 +73,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
@@ -113,12 +114,13 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.157
+    - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 0
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0
     - _SpecularHighlights: 0
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _Surface: 1
     - _UVSec: 0
@@ -131,6 +133,7 @@ Material:
     - _ColorAddSubDiff: {r: -1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 0.157}
   m_BuildTextureStacks: []
 --- !u!114 &6981438590424243537
 MonoBehaviour:
