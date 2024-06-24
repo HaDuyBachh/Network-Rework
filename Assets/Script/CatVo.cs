@@ -21,7 +21,7 @@ public class CatVo : MonoBehaviour
             timeSinceLastTriggerStay = -2f;
             dacat = CatHan.GetComponent<CatHan>().done;
         }
-        
+
         timeSinceLastTriggerStay += Time.deltaTime;
 
         ///Phần này chỉ để test
@@ -36,28 +36,28 @@ public class CatVo : MonoBehaviour
     {
         if (timeSinceLastTriggerStay >= delayBetweenTriggerStay)
         {
-            if (other.CompareTag("DayMang") && dacat)
+            if (other.CompareTag("DayMang") && dacat && !datuot)
             {
                 if (true)
-                if (InputDevicesManagement.Instance.IsTriggerPressed())
-                {
-                    GameObject dayMang = other.gameObject;
-                    Transform coverTransform = dayMang.transform.Find("Cover");
-                    if (coverTransform != null)
+                    if (InputDevicesManagement.Instance.IsTriggerPressed())
                     {
-                        GameObject cover = coverTransform.gameObject;
-                        Vector3 localScale = cover.transform.localScale;
-                        localScale.y *= 0.95f;
-                        cover.transform.localScale = localScale;
-                        audioTextManager.GetComponent<AudioSource>().Stop();
-                        audioTextManager.GetComponent<AudioTextManager>().PlayAudioClipAtIndex(5);
-                        Debug.Log("Đã chạy đến đây");
-                        datuot = true;
+                        GameObject dayMang = other.gameObject;
+                        Transform coverTransform = dayMang.transform.Find("Cover");
+                        if (coverTransform != null)
+                        {
+                            GameObject cover = coverTransform.gameObject;
+                            Vector3 localScale = cover.transform.localScale;
+                            localScale.y *= 0.95f;
+                            cover.transform.localScale = localScale;
+                            audioTextManager.GetComponent<AudioSource>().Stop();
+                            audioTextManager.GetComponent<AudioTextManager>().PlayAudioClipAtIndex(5);
+                            Debug.Log("Đã chạy đến tuốt vỏ");
+                            datuot = true;
+                        }
+                        timeSinceLastTriggerStay = 0f;
                     }
-                }
             }
-            timeSinceLastTriggerStay = 0f;
         }
     }
-    
+
 }

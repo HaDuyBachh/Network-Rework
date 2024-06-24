@@ -11,6 +11,7 @@ public class HopNhat : MonoBehaviour
     {
         if (other.CompareTag("DayMangDaTuot"))
         {
+            if (!other.GetComponent<DayMangDaTachController>().isStateCableDone) return;
             Hatmang1_andi.transform.parent.gameObject.SetActive(false);
             foreach(Transform child in other.transform)
             {
