@@ -35,7 +35,7 @@ public class PopUp : MonoBehaviour
     public void SetPopUp(bool state)
     {
         if (state) 
-            Des =Origin - 0.3f * transform.forward;
+            Des =Origin - 0.2f * transform.up;
         else
             Des = Origin;
         isPopping = true;
