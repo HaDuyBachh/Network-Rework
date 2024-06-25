@@ -12,6 +12,7 @@ TagManager:
   - DayMang
   - ViTriCatDayMang
   - trash
+  - player
   layers:
   - Default
   - TransparentFX

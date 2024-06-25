@@ -48,7 +48,7 @@ public class LineSelectLessonControl : MonoBehaviour
                 }
                 if (hit.collider.gameObject.name.Contains("Thực hành Neo Terra"))
                 {
-                    FindObjectOfType<SceneController>().SceneNetWorkCableScene();
+                    FindObjectOfType<SceneController>().SceneGamePlay();
                 }
                 Debug.Log("Bắn trúng " + hit.collider.name + " rùi");
             }
