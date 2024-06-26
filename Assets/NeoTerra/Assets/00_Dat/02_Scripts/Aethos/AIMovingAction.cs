@@ -24,7 +24,7 @@ namespace Game.Object.Action
         public override bool Enter()
         {
             _isMoving = true;
-            _surface.BuildNavMesh();
+            //_surface.BuildNavMesh();
             GameEvent.OnPlayerMove += SetMoveTarget;
             return base.Enter();
         }
