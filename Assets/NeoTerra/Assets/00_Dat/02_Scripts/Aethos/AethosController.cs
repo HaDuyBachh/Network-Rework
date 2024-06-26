@@ -43,34 +43,67 @@ namespace Game.Object.Aethos
         {
             InitComponent();
 
+            #region  Su kien ban phim
+            // _chatText.gameObject.transform.parent.gameObject.SetActive(false);
+            // _moveAction = new InputAction("Move", InputActionType.Button, "<Keyboard>/space");
+            // _moveAction.performed += ctx =>
+            // {
+            //     Resolve<AethosActionLogicComponent>().GoToScannedObject(_objectToScan.GetComponent<Trash>(), false);
+            // };
+            // _moveAction.Enable();
+
+            // _awakeAction = new InputAction("Awake", InputActionType.Button, "<Keyboard>/a");
+            // _awakeAction.performed += ctx =>
+            // {
+            //     Resolve<AethosActionLogicComponent>().Awake();
+            // };
+            // _awakeAction.Enable();
+
+            // _interactAction = new InputAction("Interact", InputActionType.Button, "<Keyboard>/i");
+            // _interactAction.performed += ctx =>
+            // {
+            //     OnPlayerInteract();
+            // };
+            // _interactAction.Enable();
+
+            // _scanAction = new InputAction("Scan", InputActionType.Button, "<Keyboard>/s");
+            // _scanAction.performed += ctx =>
+            // {
+            //     Resolve<AethosActionLogicComponent>().GoToScannedObject(_objectToScan.GetComponent<Trash>(), true);
+            // };
+            // _scanAction.Enable();
+            #endregion
+
+            #region Su kien VR
             _chatText.gameObject.transform.parent.gameObject.SetActive(false);
-            _moveAction = new InputAction("Move", InputActionType.Button, "<Keyboard>/space");
+            _moveAction = new InputAction("Move", InputActionType.Button, "<OculusTouchController>/buttonSouth");
             _moveAction.performed += ctx =>
             {
-                Resolve<AethosActionLogicComponent>().GoToScannedObject(_objectToScan.GetComponent<Trash>(), false);
+                Resolve<AethosActionLogicComponent>().GoToScannedObject(GameManager.Instance.inputLineRayCast.getHit().collider.transform.parent.GetComponent<Trash>(), false);
             };
             _moveAction.Enable();
 
-            _awakeAction = new InputAction("Awake", InputActionType.Button, "<Keyboard>/a");
+            _awakeAction = new InputAction("Awake", InputActionType.Button, "<OculusTouchController>/buttonEast");
             _awakeAction.performed += ctx =>
             {
                 Resolve<AethosActionLogicComponent>().Awake();
             };
             _awakeAction.Enable();
 
-            _interactAction = new InputAction("Interact", InputActionType.Button, "<Keyboard>/i");
+            _interactAction = new InputAction("Interact", InputActionType.Button, "<OculusTouchController>/buttonNorth");
             _interactAction.performed += ctx =>
             {
                 OnPlayerInteract();
             };
             _interactAction.Enable();
 
-            _scanAction = new InputAction("Scan", InputActionType.Button, "<Keyboard>/s");
+            _scanAction = new InputAction("Scan", InputActionType.Button, "<OculusTouchController>/buttonWest");
             _scanAction.performed += ctx =>
             {
-                Resolve<AethosActionLogicComponent>().GoToScannedObject(_objectToScan.GetComponent<Trash>(), true);
+                Resolve<AethosActionLogicComponent>().GoToScannedObject(GameManager.Instance.inputLineRayCast.getHit().collider.transform.parent.GetComponent<Trash>(), true);
             };
             _scanAction.Enable();
+            #endregion
         }
 
         // Update is called once per frame
