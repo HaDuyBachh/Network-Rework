@@ -13,7 +13,8 @@ public class LineSelectLessonControl : MonoBehaviour
     void Start()
     {
         line = GetComponent<LineRenderer>();
-        handInput.primaryPressEvent.AddListener(Clicked);
+        //handInput.primaryPressEvent.AddListener(Clicked);
+        handInput.activePressEvent.AddListener(Clicked);
     }
     public RaycastHit getHit()
     {

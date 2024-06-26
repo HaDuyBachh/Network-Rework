@@ -19,6 +19,8 @@ public class HandInputValue : MonoBehaviour
 
     public UnityEvent primaryPressEvent;
     public UnityEvent secondaryPressEvent;
+    public UnityEvent activePressEvent;
+    public UnityEvent selectPressEvent;
 
     public float triggerValue
     {
@@ -42,16 +44,28 @@ public class HandInputValue : MonoBehaviour
     }
     private void OnEnable()
     {
-        primaryButtonAction.action.started += primaryPress;
-        secondaryButtonAction.action.started += SecondaryPress;
+        if (primaryButtonAction != null) primaryButtonAction.action.started += PrimaryPress;
+        if (secondaryButtonAction != null) secondaryButtonAction.action.started += SecondaryPress;
+        if (activeAction != null) activeAction.action.started += ActivePress;
+        if (selectAction != null) selectAction.action.started += SelectPress;
     }
     private void OnDisable()
     {
-        primaryButtonAction.action.started -= primaryPress;
-        secondaryButtonAction.action.started -= SecondaryPress;
-    }
+        if (primaryButtonAction != null) primaryButtonAction.action.started -= PrimaryPress;
+        if (secondaryButtonAction != null) secondaryButtonAction.action.started -= SecondaryPress;
+        if (activeAction != null) activeAction.action.started -= ActivePress;
+        if (selectAction != null) selectAction.action.started -= SelectPress;
+    }  
 
-    private void primaryPress(InputAction.CallbackContext obj)
+    private void SelectPress(InputAction.CallbackContext obj)
+    {
+        selectPressEvent.Invoke();
+    }    
+    private void ActivePress(InputAction.CallbackContext obj)
+    {
+        activePressEvent.Invoke();
+    }    
+    private void PrimaryPress(InputAction.CallbackContext obj)
     {
         primaryPressEvent.Invoke();
     }

@@ -12,7 +12,7 @@ public class PointRecord : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent.CompareTag("trash"))
+        if (other.transform.parent != null && other.transform.parent.CompareTag("trash"))
         {
             var trash = other.transform.parent.GetComponent<Trash>();
             if (trash._type == trashcan._trashcanType)

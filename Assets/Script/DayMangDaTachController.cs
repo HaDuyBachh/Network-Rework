@@ -119,7 +119,6 @@ public class DayMangDaTachController : MonoBehaviour
             handInput = hand.GetComponent<HandInputValue>();
             handInput.primaryPressEvent.AddListener(SetSwapCable);
             handInput.secondaryPressEvent.AddListener(SetSwapCableMode);
-            handInput.transform.parent.parent.GetComponent<ContinuousTurnProviderBase>().enabled = false;
         }
         else
         {
@@ -127,7 +126,6 @@ public class DayMangDaTachController : MonoBehaviour
             handInput.primaryPressEvent.RemoveListener(SetSwapCable);
             handInput.secondaryPressEvent.RemoveListener(SetSwapCableMode);
             if (isSwapCableMode) OffSwapCableMode();
-            handInput.transform.parent.parent.GetComponent<ContinuousTurnProviderBase>().enabled = true;
         }
     }
     public void ResetTempCable()
@@ -154,6 +152,8 @@ public class DayMangDaTachController : MonoBehaviour
         selectedCableId = -1;
         currentCableId = 0;
         NewTempCable();
+        handInput.transform.parent.parent.GetComponent<ContinuousTurnProviderBase>().enabled = false;
+        handInput.transform.parent.parent.GetComponent<ContinuousMoveProviderBase>().enabled = false;
     }
     public void OffSwapCableMode()
     {
@@ -161,6 +161,8 @@ public class DayMangDaTachController : MonoBehaviour
         isSwapCableMode = false;
         Destroy(tempCable.gameObject);
         CheckStateCable();
+        handInput.transform.parent.parent.GetComponent<ContinuousTurnProviderBase>().enabled = true;
+        handInput.transform.parent.parent.GetComponent<ContinuousMoveProviderBase>().enabled = true;
     }
     public void TurnLeftCable()
     {
