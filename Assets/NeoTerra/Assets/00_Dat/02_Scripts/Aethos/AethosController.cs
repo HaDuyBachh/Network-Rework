@@ -110,7 +110,7 @@ namespace Game.Object.Aethos
             _interactAction.Enable();
 
             //_scanAction = new InputAction("Scan", InputActionType.Button, "<OculusTouchController>/buttonWest");
-            _scanAction.performed += ctx =>
+            _scanAction.started += ctx =>
             {
                 if (Game.Manager.GameManager.Instance.inputLineRayCast.lineCastMode == 1 &&
                     Game.Manager.GameManager.Instance.inputLineRayCast.getHit().HasValue)
