@@ -2896,7 +2896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Active
       m_Type: 0
@@ -2906,7 +2906,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   selectAction:
     m_UseReference: 0
     m_Action:
@@ -4640,8 +4641,9 @@ MonoBehaviour:
   line: {fileID: 1854297878}
   lineOrigin: {fileID: 1854297876}
   handInput: {fileID: 1195528839}
-  openLineCast: 0
-  isOffLineCast: 0
+  lineCastMode: 0
+  mode: []
+  Screen: {fileID: 0}
 --- !u!120 &1854297878
 LineRenderer:
   serializedVersion: 2
