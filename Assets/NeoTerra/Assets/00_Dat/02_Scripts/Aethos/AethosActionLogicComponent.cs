@@ -24,9 +24,13 @@ namespace Game.Object{
             };
         }
 
-        public void MoveToTarget(Vector3 _targetPosition){
+        public void MoveToTarget(Vector3 _targetPosition) {
             _controller.Resolve<AethosStateComponent>().ChangeState(ActionEnum.Move);
             GameEvent.OnPlayerMove?.Invoke(_targetPosition);
+            GameEvent.OnReachTarget += () =>
+            {
+                _controller.Resolve<AethosStateComponent>().ChangeState(ActionEnum.Idle);
+            };
         }
 
         public void PlayerInteracted(){

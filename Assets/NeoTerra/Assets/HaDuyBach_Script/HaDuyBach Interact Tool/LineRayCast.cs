@@ -7,57 +7,81 @@ public class LineRayCast : MonoBehaviour
     public LineRenderer line;
     public Transform lineOrigin;
     public HandInputValue handInput;
-    public bool openLineCast = false;
-    public bool isOffLineCast = false;
-    public RaycastHit hit;
+    public int lineCastMode = 0;
+    public RaycastHit? hit;
+    public List<Material> mode;
+    public GameObject Screen;
+
     void Start()
     {
         line = GetComponent<LineRenderer>();
-        handInput.primaryPressEvent.AddListener(Clicked); 
+        handInput.primaryPressEvent.AddListener(TurnOnOff);
+        handInput.activePressEvent.AddListener(GetRayCast);
     }
-    public RaycastHit getHit()
+    public bool GetTrashFromHit(out Trash trashObj)
+    {
+        return hit.Value.collider.transform.parent.TryGetComponent(out trashObj);
+    }
+    public RaycastHit? getHit()
     {
         return hit;
-    }    
-    void Clicked()
+    }
+    private void GetRayCast()
     {
-        if (!openLineCast)
+        this.hit = null;
+        if (Physics.Raycast(new Ray(lineOrigin.position, lineOrigin.forward), out var hit))
         {
-            openLineCast = true;
-            isOffLineCast = false;
+            Debug.Log("đã bắn trúng " + hit.collider.name);
+            Debug.DrawRay(lineOrigin.position, lineOrigin.forward, Color.yellow, 10f);
+            this.hit = hit;
+            if (hit.transform.TryGetComponent<RayCastActiveObjectController>(out var _active))
+            {
+                _active.RayCastActive();
+            }
+        }
+    }
+
+    private void ShowScreen(int id)
+    {
+        Screen.transform.GetChild(0).gameObject.SetActive(false);
+        for (int i = 0; i < Screen.transform.GetChild(0).childCount; i++)
+        {
+            Screen.transform.GetChild(0).GetChild(i).gameObject.SetActive(false);
+        }
+        if (id > -1)
+        {
+            Screen.transform.GetChild(0).gameObject.SetActive(true);
+            Screen.transform.GetChild(0).gameObject.SetActive(true);
+            Screen.transform.GetChild(0).GetChild(id).gameObject.SetActive(true);
+        }
+    }
+
+    private void TurnOnOff()
+    {
+        if (lineCastMode < 2)
+        {
+            lineCastMode++;
+            transform.GetComponent<Renderer>().material = mode[lineCastMode - 1];
         }
         else
-        {
-            isOffLineCast = true;
-        }    
-    }    
+            lineCastMode = 0;
+
+        ShowScreen(lineCastMode-1);
+    }
     // Update is called once per frame
     void Update()
     {
-        if (isOffLineCast)
+        if (lineCastMode == 0)
         {
-            Debug.DrawLine(lineOrigin.position, lineOrigin.position + lineOrigin.forward.normalized * 100, Color.yellow, 100f);
-            if (Physics.Raycast(new Ray(lineOrigin.position, lineOrigin.forward), out var hit))
-            {
-                this.hit = hit;
-                if (hit.transform.TryGetComponent<RayCastActiveObjectController>(out var _active))
-                {
-                    _active.RayCastActive();
-                }    
-            }
-
             line.SetPosition(0, lineOrigin.position);
             line.SetPosition(1, lineOrigin.position);
-            isOffLineCast = false;
-            openLineCast = false;
-        }    
-        
-        Debug.DrawLine(lineOrigin.position, lineOrigin.position + lineOrigin.forward.normalized * 100, Color.red);
-        if (openLineCast)
+        }
+        else
+        if (lineCastMode > 0)
         {
             line.SetPosition(0, lineOrigin.position);
-            line.SetPosition(1, lineOrigin.position + lineOrigin.forward.normalized*100);
+            line.SetPosition(1, lineOrigin.position + lineOrigin.forward.normalized * 100);
         }
-       
+
     }
 }

@@ -250,9 +250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f11573bc6ea69042be6a679f7fef487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashImage: {fileID: 0}
+  trashImage: {fileID: 2800000, guid: c87bafc2e81c06c40980415d84c1c1fd, type: 3}
   _type: 2
-  _point: 1
+  _point: 2
 --- !u!1 &5424518172353890209
 GameObject:
   m_ObjectHideFlags: 0

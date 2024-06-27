@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashImage: {fileID: 2800000, guid: 019454626db5fa345a3c0a5ec3d55b67, type: 3}
   _type: 1
-  _point: 1
+  _point: 2
 --- !u!54 &1702692831036413044
 Rigidbody:
   m_ObjectHideFlags: 0
