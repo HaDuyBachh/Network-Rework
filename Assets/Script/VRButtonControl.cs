@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class AddTrashButtonControl : MonoBehaviour
+public class VRButtonControl : MonoBehaviour
 {
     public float threshhold = 1.0f;
     public float theshhold_delta = 0;
+    public UnityEvent _event;
     private void Update()
     {
         if (theshhold_delta > 0) theshhold_delta -= Time.deltaTime;
@@ -14,7 +16,8 @@ public class AddTrashButtonControl : MonoBehaviour
     {
         if (theshhold_delta <= 0 && other.tag.Contains("Hand"))
         {
-            FindObjectOfType<Game.GameManager.TrashSpawnManager>().ResetTrashManager();
+            //FindObjectOfType<Game.GameManager.TrashSpawnManager>().ResetTrashManager();
+            _event.Invoke();
         }
     }
     private void OnTriggerExit(Collider other)
