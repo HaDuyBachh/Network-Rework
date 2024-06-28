@@ -10,7 +10,7 @@ public class VideoRoomControl : MonoBehaviour
     [SerializeField] private Transform Player;
     void Start()
     {
-        //VideoPlay(0);
+        VideoPlay(0);
     }
     private IEnumerator StartVideo(int id)
     {
